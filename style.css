@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+
+:root {
+
+  --border-color: #144fc6;
+
+  --fill-color: #6ab3f8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* changes the 1REM from 16px to 10px */
+  font-size: 62.5%;
+}
+
+body {
+
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  background-color: #3494e4;
+
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container h1 {
+  font-size: 36px;
+}
+
+.container p {
+  font-size: 16px;
+}
+
+.container .bottle {
+  border: 4px solid var(--border-color);
+
+  margin: 20px;
+  height: 32rem;
+  width: 16rem;
+
+  border-radius: 0 0 40px 40px;
+  background-color: #fff;
+
+  color: var(--border-color);
+
+  font-size: 1.6rem;
+  font-weight: 900;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.bottle .bottel-empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+
+  transition: .6s ease;
+}
+
+.bottel-empty .remaining-capacity {
+  font-size: 22px;
+}
+
+.bottel-empty .rem {
+  font-size: 12px;
+}
+
+.bottle .bottle-filling {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--fill-color);
+  font-size: 24px;
+  height: 0;
+
+  transition: .6s ease;
+}
+
+.bottle-filling span {
+  color: var(--border-color);
+}
+
+p.desc {
+  text-align: center;
+  margin: 0 10px;
+}
+
+.glasses {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  justify-content: center;
+}
+
+.glasses .glass {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 8rem;
+  width: 4rem;
+  border-radius: 0 0 15px 15px;
+  margin: 5px;
+  background-color: #fff;
+
+  color: #38bdf8;
+
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+
+  border: 3px solid var(--border-color);
+
+  transition: .3s ease;
+}
+
+.glasses .glass.full {
+  background-color: var(--fill-color);
+  color: #fff;
+}
+
+/* 416px */
+@media(max-width:26em) {
+  .glasses {
+    width: 60%;
+    /* margin: 0 auto; */
+  }
+}
+
+
+/* 336px */
+@media(max-width:21em) {
+  .glasses {
+    width: 74%;
+  }
+}
+
+
+/* 272px */
+@media(max-width:17em) {
+  .glasses {
+    width: 90%;
+  }
+}
